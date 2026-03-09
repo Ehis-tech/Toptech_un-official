@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:wght@200;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+* {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding:0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  height: 100%;
+}
+
+.swiper-wrapper {
+  height: 100%;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 20px;
+}
+
