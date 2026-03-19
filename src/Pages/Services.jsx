@@ -1,6 +1,5 @@
 import assets from '../assets/assets'
 import Title from '../Components/Title'
-import TrustedBy from '../Components/TrustedBy'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
@@ -293,7 +292,7 @@ function Services() {
 
       <div className='w-full h-[2px] bg-[#BF9A33] mt-5'></div>
 
-      <TrustedBy />
+     
     </div>
   )
 }

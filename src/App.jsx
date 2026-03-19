@@ -6,6 +6,7 @@ import Services from './Pages/Services'
 import About from './Pages/About'
 import ContactUs from './Pages/ContactUs'
 import Footer from './Components/Footer'
+import BlogDetails from './Pages/BlogDetails'
 
 function App() {
   const [theme, setTheme] = useState(
@@ -24,6 +25,7 @@ function App() {
             <Route path='/services' element={<Services />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact-us' element={<ContactUs />} />
+            <Route path='/blog/:id' element={<BlogDetails />} />
           </Routes>
         </main>
 
