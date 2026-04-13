@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 function Title({ text1, text2, text3 }) {
   return (
-    <div className='flex flex-col gap-2 items-center mb-3 max-w-full overflow-hidden'>
+    <div className='flex flex-col gap-2 items-center text-center mb-3 max-w-full overflow-hidden'>
       <motion.p
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -8,7 +8,7 @@ function Teams() {
       initial='hidden'
       whileInView='visible'
       viewport={{ once: true }}
-      className='flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-800 dark:text-white'
+      className='flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-10 text-gray-800 dark:text-white'
     >
       <Title text1={'Meet The'} text2={'Team'} />
 

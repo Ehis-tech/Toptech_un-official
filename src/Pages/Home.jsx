@@ -5,6 +5,7 @@ import WhatWeOffer from '../Components/WhatWeOffer'
 import WhyChooseUs from '../Components/WhyChooseUs'
 import TrustedBy from '../Components/TrustedBy'
 import BlogPosts from '../Components/BlogPosts'
+import { posts } from '../assets/assets'
 
 function Home() {
   return (
@@ -15,7 +16,7 @@ function Home() {
       <WhyChooseUs />
       <OurPolicy />
       <TrustedBy/>
-      <BlogPosts/>
+      <BlogPosts posts={posts}/>
     </div>
   )
 }

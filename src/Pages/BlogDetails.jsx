@@ -2,13 +2,13 @@ import { useParams } from 'react-router-dom'
 import { posts } from '../assets/assets'
 import BlogPosts from '../Components/BlogPosts'
 
-const BlogDetails = () => {
+function BlogDetails() {
   const { id } = useParams()
 
-  const post = posts.find((p) => p.id === id)
+  const post = posts.find((p) => p.id === Number(id))
 
   // get remaining posts
-  const otherPosts = posts.filter((p) => p.id !== id)
+  const otherPosts = posts.filter((p) => p.id !== Number(id))
 
   if (!post) return <p>Post not found</p>
 
@@ -27,7 +27,7 @@ const BlogDetails = () => {
       <div className='px-4 md:px-10 lg:px-20 py-10'>
         {/* Category + Date */}
         <div className='flex gap-3 text-gray-500 text-sm'>
-          <span className='text-blue-600 font-semibold uppercase'>
+          <span className='text-[#BF9A33] font-semibold uppercase'>
             {post.category}
           </span>
           <span>{post.date}</span>
@@ -37,12 +37,13 @@ const BlogDetails = () => {
         <h1 className='text-3xl font-bold mt-3'>{post.title}</h1>
 
         {/* Full Description */}
-        <p className='mt-4 text-gray-700 leading-relaxed'>{post.desc}</p>
+        <p className='mt-4 text-gray-700 leading-relaxed' dangerouslySetInnerHTML={{__html: post.desc}}>
+          {/*{post.desc} */}</p>
       </div>
 
       {/* OTHER POSTS */}
       <div className='bg-gray-100 px-4 md:px-10 lg:px-20 py-10'>
-        <h2 className='text-xl font-bold mb-6'>More Posts</h2>
+        <h2 className='text-xl text-[#BF9A33] font-bold mb-6'>More Posts</h2>
 
         <div className='flex flex-col md:flex-row gap-6'>
           <BlogPosts posts={otherPosts.slice(0, 2)} />

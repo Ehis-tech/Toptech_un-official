@@ -13,7 +13,7 @@ function Footer({ theme }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className='bg-[#BF9A33] dark:bg-[#A57B0A] pt-10 sm:pt-10 mt-20 sm:mt-40 px-4 sm:px-10 lg:px-24 xl:px-40'
+      className='bg-[#BF9A33] dark:bg-[#A57B0A] pt-10 sm:pt-10 px-4 sm:px-10 lg:px-24 xl:px-40'
     >
       {/* footer top */}
       <div className='flex justify-between lg:items-center max-lg:flex-col gap-10'>
@@ -43,6 +43,11 @@ function Footer({ theme }) {
             <li>
               <Link to='/services' className='hover:text-[#A57B0A]'>
                 Services
+              </Link>
+            </li>
+            <li>
+              <Link to='/shop' className='hover:text-[#A57B0A]'>
+                Shop
               </Link>
             </li>
             <li>
@@ -91,7 +96,7 @@ function Footer({ theme }) {
         viewport={{ once: true }}
         className='pb-6 text-sm text-white dark:text-gray-700 flex justify-center sm:justify-between gap-4 flex-wrap'
       >
-        <p>Copyright 2025 @Toptech - All Right Reserved.</p>
+        
         <div className='flex items-center justify-between gap-4'>
           <a
             href='https://www.facebook.com'
@@ -129,6 +134,8 @@ function Footer({ theme }) {
             <FaTwitter className='text-xl cursor-pointer' />{' '}
           </a>
         </div>
+        
+        <p>Copyright 2025 @Toptech - All Right Reserved.</p>
       </motion.div>
     </motion.div>
   )

@@ -1,5 +1,6 @@
 import { assets } from '../assets/assets'
 import Title from './Title'
+import { motion } from 'framer-motion'
 
 function WhyChooseUs() {
   return (
@@ -9,7 +10,13 @@ function WhyChooseUs() {
       <div className='max-w-7xl mx-auto px-4 mt-5'>
         <div className='flex flex-col lg:flex-row items-center justify-between gap-10'>
           {/* TEXT SECTION */}
-          <div className='w-full lg:w-1/2'>
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='w-full lg:w-1/2'
+          >
             <h1 className='text-3xl font-bold mb-4 dark:text-gray-500'>
               Here's why you should{' '}
               <span className='text-[#BF9A33]'>Choose</span> Us
@@ -50,16 +57,22 @@ function WhyChooseUs() {
                 specializations.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* IMAGE SECTION */}
-          <div className='hidden lg:flex w-1/2 justify-end'>
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='hidden lg:flex w-1/2 justify-end'
+          >
             <img
-              src={assets.engineering_img}
+              src={assets.toptech_img_2}
               className='w-[500px] h-[500px] object-cover rounded-lg'
               alt='Engineering'
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
