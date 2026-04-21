@@ -20,41 +20,6 @@ function Navbar({ setSidebarOpen, theme, setTheme }) {
         />
       </Link>
 
-      {/*<ul className='hidden sm:flex gap-6 text-sm text-gray-700 '>
-        {[
-          { name: 'Home', path: '/' },
-          { name: 'Services', path: '/services' },
-          { name: 'About', path: '/about' },
-          { name: 'Shop', path: '/shop' },
-          { name: 'ContactUs', path: '/contact-us' },
-        ].map(({ name, path }) => (
-          <NavLink
-            key={name}
-            to={path}
-            className={({ isActive }) =>
-              `group flex flex-col items-center gap-1 cursor-pointer ${isActive ? 'text-[#BF9A33]' : 'text-gray-700'} hover:text-[#BF9A33]`
-            }
-          >
-            {({ isActive }) => (
-              <>
-                <span>{name}</span>
-
-                
-                <span
-                  className={`
-              hidden sm:block
-              h-[2px] w-1/2
-              transition-all duration-300
-              ${isActive ? 'bg-gray-700' : 'bg-transparent'}
-              group-hover:bg-[#BF9A33]
-            `}
-                />
-              </>
-            )}
-          </NavLink>
-        ))}
-      </ul> */}
-
       <ul className='hidden sm:flex gap-6 text-sm text-gray-700'>
 
   {/* HOME */}

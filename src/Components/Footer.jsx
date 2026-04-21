@@ -1,5 +1,4 @@
 import assets from '../assets/assets'
-import { motion } from 'framer-motion'
 import { FaFacebook } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 import { FaInstagram } from 'react-icons/fa'
@@ -8,26 +7,11 @@ import { Link } from 'react-router-dom'
 
 function Footer({ theme }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-      className='bg-[#BF9A33] dark:bg-[#A57B0A] pt-10 sm:pt-10 px-4 sm:px-10 lg:px-24 xl:px-40'
-    >
+    <div className='bg-[#BF9A33] dark:bg-[#A57B0A] pt-10 sm:pt-10 px-4 sm:px-10 lg:px-24 xl:px-40'>
       {/* footer top */}
       <div className='flex justify-between lg:items-center max-lg:flex-col gap-10'>
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className='space-y-5 text-sm text-white dark:text-gray-700'
-        >
-          <img
-            src={theme === 'dark' ? assets.toptech_img : assets.toptech_img}
-            className='w-10 sm:w-10'
-            alt=''
+        <div className='space-y-5 text-sm text-white dark:text-gray-700'>
+          <img src={theme === 'dark' ? assets.toptech_img : assets.toptech_img} className='w-10 sm:w-10'   alt=''
           />
           <p className='max-w-md'>
             From strategy to execution, we craft power solutions that move your
@@ -61,14 +45,8 @@ function Footer({ theme }) {
               </Link>
             </li>
           </ul>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className=' text-white dark:text-gray-400'
-        >
+        </div>
+        <div className=' text-white dark:text-gray-400' >
           <h3 className='font-semibold'>Send Us A Mail Today</h3>
           <p className='text-sm mt-2 mb-6'>
             Tell Us Which Of Our Services You Need.
@@ -83,19 +61,13 @@ function Footer({ theme }) {
               Submit
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
       <hr className='border-gray-300 dark:border-gray-600 my-6' />
 
       {/*footer bottom */}
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-        viewport={{ once: true }}
-        className='pb-6 text-sm text-white dark:text-gray-700 flex justify-center sm:justify-between gap-4 flex-wrap'
-      >
+      <div className='pb-6 text-sm text-white dark:text-gray-700 flex justify-center sm:justify-between gap-4 flex-wrap' >
         
         <div className='flex items-center justify-between gap-4'>
           <a
@@ -136,8 +108,8 @@ function Footer({ theme }) {
         </div>
         
         <p>Copyright 2025 @Toptech - All Right Reserved.</p>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   )
 }
 

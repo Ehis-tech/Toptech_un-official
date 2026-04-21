@@ -20,7 +20,7 @@ function Hero() {
         slidesPerView={1}
       >
         <SwiperSlide>
-          <section className='relative h-screen w-full h-[600px]'>
+          <section className='relative w-full lg:h-[600px] h-[550px]'>
             <motion.img
               src={assets.bg_1}
               alt=''
@@ -78,7 +78,7 @@ function Hero() {
           </section>
         </SwiperSlide>
         <SwiperSlide>
-          <section className='relative h-screen w-full h-[600px]'>
+          <section className='relative w-full lg:h-[600px] h-[550px]'>
             <motion.img
               src={assets.bg_2}
               alt=''
@@ -136,7 +136,7 @@ function Hero() {
           </section>
         </SwiperSlide>
         <SwiperSlide>
-          <section className='relative h-screen w-full h-[600px]'>
+          <section className='relative w-full lg:h-[600px] h-[550px]'>
             <motion.img
               src={assets.bg_3}
               alt=''
